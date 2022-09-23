@@ -4,10 +4,13 @@
     <title>Lightgallery Exif Test</title>
 
     <!-- Include base lightgallery styling -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.6.1/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.6.1/css/lg-pager.min.css" integrity="sha512-F4gJy0MBz7nwvFMIYNeap+CXaVQY0Y9pwsn/Up4mvOfjYD50u+8D7jIVZBkeHV7hZ2xjhY8uJRMkRzWQBvznRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.6.1/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.1/leaflet.css" integrity="sha512-UkezATkM8unVC0R/Z9Kmq4gorjNoFwLMAWR/1yZpINW08I79jEKx/c8NlLSvvimcu7SL8pgeOnynxfRpe+5QpA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- lg-exif styles -->
-    <link rel="stylesheet" href="../dist/css/lg-exif.css">
+    <link rel="stylesheet" href="../dist/lg-exif.css">
   </head>
 
   <body style="font-family: sans-serif">
@@ -23,7 +26,7 @@
       <a href="test.jpg" class="item" data-sub-html="Subtitles that are here for testing!">
         <img src="test.jpg" width="500px"/>
       </a>
-      
+
       <!-- Attribution 1 -->
       <p>
         By <a href="//commons.wikimedia.org/wiki/User:Tobi_87" title="User:Tobi 87">Tobi 87</a> - <span class="int-own-work" lang="en">Own
@@ -45,21 +48,23 @@
     </div>
 
     <!-- Include lightgallery + pager + thumbnail plugins -->
-    <script src="https://cdn.jsdelivr.net/combine/npm/jquery,npm/lightgallery,npm/lg-pager,npm/lg-thumbnail"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.6.1/lightgallery.min.js" integrity="sha512-2KYdY5Sg3LCcbEnJ6JSoDyFDpgoDHPHl+4ZFE1DV23IVqiCSsjfkmuhJ0Uu6VTkvqaRtQDZ/LyhmMXvWUfymSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.6.1/plugins/pager/lg-pager.min.js" integrity="sha512-vL8Dh4eB7yEuSWXAKvn6obHH4UFH4HJbelG9t7WF65evjsa5Xr1ukjoSuv/pSgSF4jW2BehPx19JykQ/SA4Qcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.6.1/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-HbdAMrTXUriN/BCnuq4aj1BHa0vPqXMRokZoAI/BAbEfIt49PY5De3jP5u2lDFJetPpx7LkLHm8glbP1NjxxiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.1/leaflet.js" integrity="sha512-y6IQOhEalDvx6StYG9hG/64K2vuX3bVJ2Q3sBd0uP2UlhIAwOc9DEFgQ/oz1dQmsc2XbWwhn5MfpT76+1bx2Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exifreader"></script>
 
     <!-- lg-exif plugin -->
-    <script src="../dist/js/lg-exif.js"></script>
+    <script src="../dist/lg-exif.js"></script>
 
     <!-- Example Helper -->
     <script src="example.js"></script>
 
     <!-- Init lightgallery -->
     <script>
-      $(document).ready(function () {
-        $("#lightgallery").lightGallery({selector: '.item'});
-      });
+        lightGallery(document.getElementById('lightgallery'),{selector: '.item'});
     </script>
-    
+
   </body>
 
 </html>

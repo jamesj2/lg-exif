@@ -1,35 +1,45 @@
 {
-  "name": "lg-exif",
-  "version": "1.0.0",
-  "description": "A plugin for lightgallery which adds an exif panel",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amcolash/lg-exif.git"
-  },
-  "keywords": [
-    "lightgallery",
-    "maps",
-    "exif",
-    "info",
-    "photo"
-  ],
-  "author": "Andrew McOlash",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/amcolash/lg-exif/issues"
-  },
-  "homepage": "https://github.com/amcolash/lg-exif#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-butternut": "^1.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-uglifycss": "^1.1.0"
-  }
+    "name": "lg-exif",
+    "version": "2.0.0",
+    "description": "A plugin for lightgallery which adds an exif panel",
+    "main": "dist/lg-exif.js",
+    "module": "dist/lg-exif.es5.js",
+    "style": "dist/css/lg-exif.css",
+    "scripts": {
+        "build": "NODE_ENV=production ./node_modules/.bin/rollup -c"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amcolash/lg-exif.git"
+    },
+    "keywords": [
+        "lightgallery",
+        "maps",
+        "exif",
+        "info",
+        "photo"
+    ],
+    "author": "Andrew McOlash",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/amcolash/lg-exif/issues"
+    },
+    "homepage": "https://github.com/amcolash/lg-exif#readme",
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^22.0.2",
+        "@rollup/plugin-node-resolve": "^14.1.0",
+        "esbuild": "^0.14.25",
+        "prettier": "^2.7.1",
+        "rollup-plugin-copy": "^3.4.0",
+        "rollup-plugin-esbuild": "^4.8.2"
+    },
+    "dependencies": {
+        "exifreader": "^4.5.1",
+        "leaflet": "^1.9.1"
+    },
+    "peerDependencies": {
+        "exifreader": "^4.5.1",
+        "leaflet": "^1.9.1",
+        "rollup": "^2.x.x"
+    }
 }
